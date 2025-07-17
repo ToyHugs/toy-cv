@@ -1,0 +1,23 @@
+[package]
+name = "toy-cv"
+version = "0.0.0"
+compiler = "0.13.1"
+entrypoint = "lib.typ"
+repository = "https://github.com/ToyHugs/toy-cv"
+authors = ["Pierre GUYOT <@toyhugs>"]
+license = "MIT-0"
+description = "✨ A CVs and cover letters template"
+keywords = [
+  "CV",
+  "resume",
+  "cover letter",
+]
+exclude = ["reference/", "*.pdf"]
+categories = ["cv"]
+disciplines = []
+
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
