@@ -6,12 +6,8 @@ entrypoint = "lib.typ"
 repository = "https://github.com/ToyHugs/toy-cv"
 authors = ["Pierre GUYOT <@toyhugs>"]
 license = "MIT-0"
-description = "✨ A CVs and cover letters template"
-keywords = [
-  "CV",
-  "resume",
-  "cover letter",
-]
+description = "✨ A CV and cover letter template"
+keywords = ["CV", "resume", "cover letter"]
 exclude = ["reference/", "*.pdf"]
 categories = ["cv"]
 disciplines = []
