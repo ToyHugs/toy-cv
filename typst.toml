@@ -2,7 +2,7 @@
 name = "toy-cv"
 version = "0.0.0"
 compiler = "0.13.1"
-entrypoint = "lib.typ"
+entrypoint = "scr/lib.typ"
 repository = "https://github.com/ToyHugs/toy-cv"
 authors = ["Pierre GUYOT <@toyhugs>"]
 license = "MIT-0"
@@ -14,6 +14,6 @@ disciplines = []
 
 
 [template]
-path = "template"
-entrypoint = "main.typ"
+path = "src/templates"
+entrypoint = "cv.typ"
 thumbnail = "thumbnail.png"
