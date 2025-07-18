@@ -8,7 +8,6 @@
   city: "Springfield",
   i18n: "en",
   date: datetime.today(),
-  signature: "Jane Smith",
   subject: "Application for Software Engineer Position",
 )
 

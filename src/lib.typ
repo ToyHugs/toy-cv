@@ -33,21 +33,37 @@
   utils.recipient-line(sender-name, main-color)
   sender-description
 
-  set align(right)
-  utils.recipient-line(recipient-name, main-color)
-  recipient-description
-
-  set align(left)
-
-
-
-
-  body
-}
-
-#let signature(
-  body,
-  image
-) = {
+  {
+    set align(right)
+    utils.recipient-line(recipient-name, main-color)
+    recipient-description
+  }
   
+  v(1em)
+
+  {
+    set text(weight: 700)
+    utils.translate("subject", i18n)
+    [ ]
+    subject
+  }
+  
+  // ==========================================================================
+  //                                  Body
+  // ==========================================================================
+  
+  {
+    body
+  }
+
+  // ==========================================================================
+  //                                 Signature
+  // ==========================================================================
+  
+  if signature != none{
+    set align(right)
+    set text(size: 1.5em, weight: 700)
+    sender-name
+    image(signature, width: 5cm, height: auto)
+  }
 }

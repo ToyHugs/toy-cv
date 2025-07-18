@@ -15,3 +15,13 @@
   }
 }
 
+// Function to translate text based on the provided language
+#let translate(key, lang) = {
+  let dict = toml("i18n/" + lang + ".toml")
+  let translate-value = dict.lang.at(key, default: none)
+  
+  if translate-value != none {
+    return translate-value
+  }
+  panic("Translation key '" + key + "' not found in language '" + lang + "'.")
+}
