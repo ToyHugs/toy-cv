@@ -9,6 +9,8 @@
   i18n: "en",
   date: datetime.today(),
   subject: "Application for Software Engineer Position",
+  prompt-injection: true,
+  keywords-injection: ("software", "engineer", "developer"),
 )
 
-testd wdw
+Test

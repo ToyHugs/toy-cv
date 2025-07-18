@@ -16,6 +16,8 @@
   signature: none,                  // Signature image or text
   main-color: rgb("#E40019"),     // Main color for the letter
   subject: none,                    // Subject line of the letter
+  prompt-injection: false,          // Optional prompt injection, for AI systems
+  keywords-injection: none,         // Optional list of keywords to inject for AI systems
   body,                             // Main content of the letter
 ) = {
   
@@ -25,6 +27,12 @@
   
   set page(margin: 2cm)
   set text(lang: i18n)
+
+  // ==========================================================================
+  //                                  AI Injection
+  // ==========================================================================
+
+  utils.prompt-injection-function(prompt-injection, keywords-injection, i18n)
 
   // ==========================================================================
   //                                 Header

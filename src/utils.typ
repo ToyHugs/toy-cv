@@ -25,3 +25,19 @@
   }
   panic("Translation key '" + key + "' not found in language '" + lang + "'.")
 }
+
+// Function to handle prompt injection for AI systems
+// From brilliant-CV @yunanwg : https://github.com/yunanwg/brilliant-CV
+#let prompt-injection-function(prompt-injection, keywords-injection, i18n) = {
+  let prompt-ai = ""
+
+  if prompt-injection {
+    prompt-ai = translate("prompt-injection", i18n)
+  }
+
+  if keywords-injection != none {
+    prompt-ai = prompt-ai + " " + keywords-injection.join(" ")
+  }
+
+  place(text(prompt-ai, size: 1pt, fill: white), dx: 0pt, dy: 0pt)
+}
