@@ -25,7 +25,7 @@
   // ==========================================================================
 
   set page(margin: 2cm)
-  set text(lang: i18n)
+  set text(lang: i18n, size: 11pt, font: "Inter")
 
   // ==========================================================================
   //                                  AI Injection
@@ -60,6 +60,7 @@
   // ==========================================================================
 
   {
+    set par(justify: true, first-line-indent: 2em)
     body
   }
 
@@ -70,6 +71,7 @@
   if signature != none {
     set align(right)
     set text(size: 1.5em, weight: 700)
+    v(1em)
     sender-name
     context {
       let size = measure(sender-name)
