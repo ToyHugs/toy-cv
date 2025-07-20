@@ -1,4 +1,4 @@
-#import "../lib.typ": *
+#import "../src/lib.typ": *
 
 #show: cover-letter.with(
   recipient-name: "John Doe",
