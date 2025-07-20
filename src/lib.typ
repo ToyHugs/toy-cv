@@ -10,9 +10,7 @@
   recipient-description: none, // Recipient's title or position
   sender-name: none, // Your full name
   sender-description: none, // Your description (address, contact info)
-  city: none, // City where
   i18n: "en", // Language
-  date: datetime.today(), // Date of the letter
   signature: none, // Signature image or text
   main-color: rgb("#E40019"), // Main color for the letter
   subject: none, // Subject line of the letter
@@ -69,7 +67,7 @@
 
   if signature != none {
     set align(right)
-    set text(size: 1.5em, weight: 700)
+    set text(size: 1.3em, weight: 700)
     set par(spacing: 0.5em)
 
     sender-name
@@ -79,3 +77,5 @@
     }
   }
 }
+
+
