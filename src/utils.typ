@@ -41,3 +41,10 @@
 
   place(text(prompt-ai, size: 1pt, fill: white), dx: 0pt, dy: 0pt)
 }
+
+// Function for creating subtitle text in CV left column
+#let left-column-subtitle(body) = {
+  set par(spacing: 0.25em)
+  text(size: 1.5em, weight: 300)[~#body]
+  rect(radius: 100%, width: 100%, height: 1.5pt, fill: black)
+}
