@@ -47,7 +47,6 @@
   }
 
   v(1em)
-
   {
     set text(weight: 700)
     utils.translate("subject", i18n)
@@ -60,7 +59,7 @@
   // ==========================================================================
 
   {
-    set par(justify: true, first-line-indent: 2em)
+    set par(justify: true, first-line-indent: 2em, spacing: 1.5em)
     body
   }
 
@@ -71,7 +70,8 @@
   if signature != none {
     set align(right)
     set text(size: 1.5em, weight: 700)
-    v(1em)
+    set par(spacing: 0.5em)
+
     sender-name
     context {
       let size = measure(sender-name)
