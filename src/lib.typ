@@ -1,3 +1,9 @@
+// CV and Cover Letter Template in Typst
+
+// Author: Pierre GUYOT (@toyhugs - pierre.guyot@toyhugs.fr)
+// Date: 2025-07-20
+// License: MIT License
+
 #import "utils.typ" as utils
 
 // Cover Letter Template
