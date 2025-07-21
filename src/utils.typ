@@ -48,3 +48,45 @@
   text(size: 1.5em, weight: 300)[~#body]
   rect(radius: 100%, width: 100%, height: 1.5pt, fill: black)
 }
+
+// Function to create the contact section in the CV
+// TODO/FIXME : Icons aren't the same size, need to fix this with a grid
+#let contact-section(
+  i18n: "en",
+  main-color: black,
+  contact-entries: none, // Array of dictionnaries
+) = {
+  set text(size: 11pt, font: "Inter")
+  set par(spacing: 1em)
+
+  left-column-subtitle(translate("contact", i18n))
+
+  for value in contact-entries {
+    // Ensure the logo-name, and logo-text are defined
+    if (
+      value.at("logo-name", default: none) == none or value.at("logo-text", default: none) == none
+    ) {
+      panic("Contact entry must contain 'logo-name' and 'logo-text'. It can also contain 'logo-font' and 'logo-link'.")
+    }
+
+    // If a font is provided, use it; otherwise, default to "Font Awesome 6 Free Solid"
+    let logo-font = value.at("logo-font", default: "Font Awesome 6 Free Solid")
+
+    // Create the icon with the specified font and color
+    let text-display = [
+      #text(fill: main-color, font: logo-font, value.logo-name)
+      #value.logo-text
+    ]
+
+    // If a link is provided, wrap the icon and text in a link
+    if value.at("logo-link", default: none) != none {
+      link(value.logo-link, text-display)
+    } else {
+      // Otherwise, just display the icon and text
+      text-display
+    }
+
+    parbreak()
+  }
+}
+
