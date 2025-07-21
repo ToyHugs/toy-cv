@@ -44,9 +44,10 @@
 
 // Function for creating subtitle text in CV left column
 #let left-column-subtitle(body) = {
-  set par(spacing: 0.25em)
+  set par(spacing: 0.4em)
   text(size: 1.5em, weight: 300)[~#body]
   rect(radius: 100%, width: 100%, height: 1.5pt, fill: black)
+  v(-0.5em) // Add a vertical space after the subtitle
 }
 
 // Function to create the contact section in the CV
@@ -56,9 +57,6 @@
   main-color: black,
   contact-entries: none, // Array of dictionnaries
 ) = {
-  set text(size: 11pt, font: "Inter")
-  set par(spacing: 1em)
-
   left-column-subtitle(translate("contact", i18n))
 
   for value in contact-entries {
@@ -90,3 +88,10 @@
   }
 }
 
+#let left-section(
+  title: none,
+  body,
+) = {
+  left-column-subtitle(title)
+  body
+}

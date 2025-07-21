@@ -24,6 +24,8 @@
       logo-text: "Driving License",
     ),
   ))
+  #v(1fr)
+  #utils.left-section(title: "Languages", [#lorem(30)]),
 ]
 
 
