@@ -1,6 +1,7 @@
 // Utility Functions in Typst
 
 // Author: Pierre GUYOT (@toyhugs - pierre.guyot@toyhugs.fr)
+// Main repository: https://github.com/ToyHugs/toy-cv
 // Date: 2025-07-18
 // License: MIT License
 
