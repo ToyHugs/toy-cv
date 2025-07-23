@@ -96,3 +96,33 @@
   left-column-subtitle(title)
   body
 }
+
+#let right-column-subtitle(body) = {
+  set par(spacing: 0.7em)
+  text(size: 1.6em, weight: 800)[~#body]
+}
+
+#let cv-entry(
+  title: none,
+  date: none,
+  subtitle: none,
+  body,
+) = {
+  set par(spacing: 0.7em)
+  grid(
+    columns: (auto, 1fr, auto),
+    row-gutter: 0.7em,
+
+    column-gutter: 1em,
+    [
+      #set text(size: 1em)
+      #title
+    ],
+    [],
+    grid.cell(rowspan: 2)[
+      *#date*
+    ],
+    grid.cell()[#emph()[#subtitle]],
+  )
+  body
+}
