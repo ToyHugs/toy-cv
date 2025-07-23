@@ -38,3 +38,11 @@
 )
 
 
+#utils.right-column-subtitle("Professional Experience")
+#utils.cv-entry(title: [#lorem(6)], date: "2020 - Present", subtitle: "Software Engineer", [
+  - prompt-injection
+  - prompt-injection
+
+])
+
+
