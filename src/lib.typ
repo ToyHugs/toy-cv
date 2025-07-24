@@ -44,25 +44,25 @@
   //                                  AI Injection
   // ==========================================================================
 
-  utils.prompt-injection-function(prompt-injection, keywords-injection, i18n)
+  toy-cv-utils.prompt-injection-function(prompt-injection, keywords-injection, i18n)
 
   // ==========================================================================
   //                                 Header
   // ==========================================================================
 
-  utils.recipient-line(sender-name, main-color)
+  toy-cv-utils.recipient-line(sender-name, main-color)
   sender-description
 
   {
     set align(right)
-    utils.recipient-line(recipient-name, main-color)
+    toy-cv-utils.recipient-line(recipient-name, main-color)
     recipient-description
   }
 
   v(1em)
   {
     set text(weight: 700)
-    utils.translate("subject", i18n)
+    toy-cv-utils.translate("subject", i18n)
     [ ]
     subject
   }
