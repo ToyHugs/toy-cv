@@ -123,18 +123,19 @@
   // ==========================================================================
 
   let margin-placement = 20pt
+  let margin-columns = 10pt
   let error-placement = 1pt
 
   // Margin rectified with error placement
   let margin-rectified = margin-placement + error-placement
 
   set page(margin: margin-placement)
-  set text(size: 11pt, font: "Inter")
+  set text(size: 10pt, font: "Inter")
 
   place(left, dx: -margin-rectified)[#rect(
       fill: secondary-color,
 
-      width: (columns-ratio + 2 * margin-placement + error-placement),
+      width: (columns-ratio + margin-placement + error-placement + margin-columns),
       height: (100% + margin-rectified),
     )]
 
@@ -220,7 +221,7 @@
     columns: (columns-ratio, 1fr),
     // Left and right content columns
     align: top,
-    gutter: 2 * margin-placement,
+    gutter: 2 * margin-columns,
 
     // ========================================================================
     //                               Left Content
