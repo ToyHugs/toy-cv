@@ -5,7 +5,8 @@
 // Date: 2025-07-20
 // License: MIT License
 
-#import "utils.typ" as utils
+#import "utils.typ" as toy-cv-utils
+#import "utils.typ": contact-section, cv-entry, left-section, right-column-subtitle
 
 
 
@@ -106,6 +107,9 @@
   main-color: rgb("#E40019"), // Main color for the CV
   secondary-color: luma(75%),
   tertiary-color: white,
+  i18n: "en", // Language
+  prompt-injection: false, // Optional prompt injection, for AI systems
+  keywords-injection: none, // Optional list of keywords to inject for AI systems
   title: none, // Your name or main title
   subtitle: none, // Your subtitle or description
   avatar: none, // Profile image
@@ -133,6 +137,12 @@
       width: (columns-ratio + 2 * margin-placement + error-placement),
       height: (100% + margin-rectified),
     )]
+
+  // ==========================================================================
+  //                                 AI Injection
+  // ==========================================================================
+
+  toy-cv-utils.prompt-injection-function(prompt-injection, keywords-injection, i18n)
 
   // ==========================================================================
   //                                  Header

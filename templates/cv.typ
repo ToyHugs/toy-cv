@@ -3,7 +3,7 @@
 #let main-color = rgb("#E40019")
 
 #let left-content = [
-  #utils.contact-section(main-color: main-color, i18n: "en", contact-entries: (
+  #contact-section(main-color: main-color, i18n: "en", contact-entries: (
     (
       logo-name: "envelope",
       logo-link: "mailto:john.doe@example.com",
@@ -25,7 +25,7 @@
     ),
   ))
   #v(1fr)
-  #utils.left-section(title: "Languages", [#lorem(30)]),
+  #left-section(title: "Languages", [#lorem(30)]),
 ]
 
 
@@ -38,8 +38,8 @@
 )
 
 
-#utils.right-column-subtitle("Professional Experience")
-#utils.cv-entry(title: [#lorem(6)], date: "2020 - Present", subtitle: "Software Engineer", [
+#right-column-subtitle("Professional Experience")
+#cv-entry(title: [#lorem(6)], date: "2020 - Present", subtitle: "Software Engineer", [
   - prompt-injection
   - prompt-injection
 
