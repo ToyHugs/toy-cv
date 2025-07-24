@@ -8,7 +8,7 @@ authors = ["Pierre GUYOT <@toyhugs>"]
 license = "MIT-0"
 description = "✨ A CV and cover letter template"
 keywords = ["CV", "resume", "cover letter"]
-exclude = ["reference/", "*.pdf"]
+exclude = ["previews/", "*.pdf"]
 categories = ["cv"]
 disciplines = []
 
