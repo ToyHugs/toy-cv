@@ -56,7 +56,7 @@
 #let contact-section(
   i18n: "en",
   main-color: black,
-  contact-entries: none, // Array of dictionnaries
+  contact-entries: none, // Array of dictionaries
 ) = {
   left-column-subtitle(translate("contact", i18n))
 
