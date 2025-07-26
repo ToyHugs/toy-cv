@@ -1,4 +1,4 @@
-#import "../src/lib.typ": *
+#import "@preview/toy-cv:0.1.0": *
 
 #show: cover-letter.with(
   recipient-name: "John Doe",

@@ -1,4 +1,4 @@
-#import "../src/lib.typ": *
+#import "@preview/toy-cv:0.1.0": *
 
 #let main-color = rgb("#E40019")
 

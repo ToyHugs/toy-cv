@@ -1,12 +1,12 @@
 [package]
 name = "toy-cv"
-version = "0.0.0"
+version = "0.1.0"
 compiler = "0.13.1"
-entrypoint = "scr/lib.typ"
+entrypoint = "src/lib.typ"
 repository = "https://github.com/ToyHugs/toy-cv"
 authors = ["Pierre GUYOT <@toyhugs>"]
 license = "MIT-0"
-description = "✨ A CV and cover letter template"
+description = "Colorful and elegant 2-column CV and cover letter template. It a clean layout, making it easy to showcase your skills and experience. Simple to use and adapt to your needs."
 keywords = ["CV", "resume", "cover letter"]
 exclude = ["previews/", "*.pdf"]
 categories = ["cv"]
