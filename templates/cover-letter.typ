@@ -9,7 +9,7 @@
   subject: "Application for Software Engineer Position",
   prompt-injection: true,
   keywords-injection: ("software", "engineer", "developer"),
-  signature: "/templates/assets/signature.png",
+  signature: image("assets/signature.png"),
 )
 
 #lorem(100)

@@ -88,7 +88,8 @@
     sender-name
     context {
       let size = measure(sender-name)
-      image(signature, width: size.width)
+      set image(width: size.width)
+      signature
     }
   }
 }
@@ -186,7 +187,7 @@
             stroke: 4pt + tertiary-color,
             clip: true,
           )[
-            #image(avatar)
+            #avatar
           ]
         }
       ],
