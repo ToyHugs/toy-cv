@@ -80,7 +80,7 @@
   //                                 Signature
   // ==========================================================================
 
-  if signature != none {
+  {
     set align(right)
     set text(size: 1.3em, weight: 700)
     set par(spacing: 0.5em)
