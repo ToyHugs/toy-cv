@@ -98,7 +98,7 @@
     Young graduate in Computer Science from the University of Technology\
     *Available from January 2024 for a full-time position*\
   ],
-  avatar: image("assets/avatar.jpg"),
+  avatar: image("assets/avatar.png"),
   avatar-size: 2.2cm,
   left-content: left-content,
 )
