@@ -19,7 +19,7 @@
             owner = "typst";
             repo = "typst";
             rev = "v0.13.1";
-            sha256 = "sha256-8ace67d942a4b8c6b9d95b73b3a39f5d0259c7b2"
+            sha256 = "sha256-vbBwIQt4xWZaKpXgFwDsRQIQ0mmsQPRR39m8iZnnuj0=";
           };
         });
 
