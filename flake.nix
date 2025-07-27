@@ -27,18 +27,6 @@
 
         check = "${typst-check.packages.${system}.default}/bin/typst-package-check";
       in {
-        packages.default = pkgs.writeShellScriptBin "build-typst" ''
-          set -e
-          cd templates
-
-          echo "Compiling Typst template..."
-          ${typst}/bin/typst compile -f png --pages 1 --ppi 250 cv.typ previews/cv.png
-          ${typst}/bin/typst compile -f png --pages 1 --ppi 250 cover-letter.typ previews/cover-letter.png
-          echo "Optimizing image with oxipng..."
-          ${oxipng}/bin/oxipng -o max previews/cv.png
-          ${oxipng}/bin/oxipng -o max previews/cover-letter.png
-          cp previews/cv.png ../thumbnail.png
-        '';
 
         apps = {
           lint = {
@@ -50,7 +38,20 @@
 
           build = {
             type = "app";
-            program = toString (self.packages.${system}.default);
+            program = toString (pkgs.writeShellScript "build-typst" ''
+              set -e
+
+              echo "Compiling Typst template..."
+              ${typst}/bin/typst compile -f png --pages 1 --ppi 250 templates/cv.typ templates/previews/cv.png --font-path .
+              ${typst}/bin/typst compile -f png --pages 1 --ppi 250 templates/cover-letter.typ templates/previews/cover-letter.png --font-path .
+
+              echo "Optimizing image with oxipng..."
+              ${oxipng}/bin/oxipng -o max templates/previews/cv.png
+              ${oxipng}/bin/oxipng -o max templates/previews/cover-letter.png
+
+              cp templates/previews/cv.png thumbnail.png
+            ''
+            );
           };
         };
 
