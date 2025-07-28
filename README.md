@@ -1,8 +1,15 @@
 <h1 align="center">
   Toy CV
 </h1>
+
 <p align="center">
   ✨ A Typst template for writing beautiful CVs and cover letters
+  <br/><br/>
+  <img alt="Static Badge" src="https://img.shields.io/badge/Typst-v0.13.1-blue?logo=Typst">
+  <a href="https://github.com/toyhugs/toy-cv/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/toyhugs/toy-cv"></a>
+  <a href="https://typst.app/universe/package/toy-cv"><img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%93%A6Typst-Universe-blueviolet"></a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/toyhugs/toy-cv">
+  
 </p>
 
 ---
