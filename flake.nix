@@ -42,12 +42,12 @@
               set -e
 
               echo "Compiling Typst template..."
-              ${typst}/bin/typst compile -f png --pages 1 --ppi 250 templates/cv.typ templates/previews/cv.png --font-path .
-              ${typst}/bin/typst compile -f png --pages 1 --ppi 250 templates/cover-letter.typ templates/previews/cover-letter.png --font-path .
+              ${typst}/bin/typst compile -f png --pages 1 --ppi 250 templates/cv.typ previews/cv.png --font-path .
+              ${typst}/bin/typst compile -f png --pages 1 --ppi 250 templates/cover-letter.typ previews/cover-letter.png --font-path .
 
               echo "Optimizing image with oxipng..."
-              ${oxipng}/bin/oxipng -o max templates/previews/cv.png
-              ${oxipng}/bin/oxipng -o max templates/previews/cover-letter.png
+              ${oxipng}/bin/oxipng -o max previews/cv.png
+              ${oxipng}/bin/oxipng -o max previews/cover-letter.png
 
               cp templates/previews/cv.png thumbnail.png
             ''
