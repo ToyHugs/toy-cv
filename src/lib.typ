@@ -243,13 +243,3 @@
 }
 
 
-
-// ===========================================================================
-//                                   CV Utils
-// ===========================================================================
-
-// Function for creating a section for right column in CV
-#let right-column-section(
-  title: none, // Title of the entry
-  ..args,
-) = {}
