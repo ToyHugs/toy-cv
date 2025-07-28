@@ -262,7 +262,3 @@ It also uses icons from [Font Awesome](https://fontawesome.com/license/free), wh
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute to this project.
-
-```
-
-```
